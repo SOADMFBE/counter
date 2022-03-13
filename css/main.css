@@ -83,7 +83,7 @@ body {
   font-family: "Noto Sans", sans-serif;
   top: 0;
   left: 0;
-  background: url("./img/ian-schneider-PAykYb-8Er8-unsplash.jpg");
+  background: url("https://pin.it/47CvoCh");
   background-size: cover;
   background-position-x: 50%;
   background-position-y: 15%;
@@ -148,8 +148,7 @@ h1 {
 
 @media only screen and (min-width: 1060px) {
   .wrapper {
-    
-      grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 1fr);
   }
 }
 /*# sourceMappingURL=main.css.map */
