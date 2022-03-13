@@ -1,25 +1,30 @@
 /*обнуление*/
-*{
-    padding:0;
+* {
+    padding: 0;
     margin: 0;
     border: 0;
 }
 
-*,*:before,*:after {
+*,
+*:before,
+*:after {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-:focus, :active {
-    outline:none;
-}
-
-a:focus, a:active {
+:focus,
+:active {
     outline: none;
 }
 
-html, body{
+a:focus,
+a:active {
+    outline: none;
+}
+
+html,
+body {
     height: 100%;
     width: 100%;
     line-height: 1;
@@ -28,28 +33,31 @@ html, body{
     -webkit-text-size-adjust: 100%;
 }
 
-input, button, textarea{
+input,
+button,
+textarea {
     font-family: inherit;
 }
 
-input::-ms-clear{
+input::-ms-clear {
     display: none;
 }
 
-button{
-    cursor:pointer;
+button {
+    cursor: pointer;
 }
 
-button::-moz-focus-inner{
+button::-moz-focus-inner {
     padding: 0;
     margin: 0;
 }
 
-a, a:visited{
+a,
+a:visited {
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     text-decoration: none;
 }
 
@@ -61,7 +69,12 @@ img {
     vertical-align: top;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-size: inherit;
 }
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
@@ -70,34 +83,67 @@ $maxWidth: 1280;
 @mixin adaptiv-font($pcSize, $mobSize) {
     $addSize: $pcSize - $mobSize;
     $maxWidth: $maxWidth - 320;
-    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+    font-size: calc(
+        #{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth})
+    );
 }
 
 $font: 'Noto Sans', sans-serif;
-$rfz: 10px;
 
 body {
-    font-size: 4rem;
     font-family: $font;
-    font-weight: 700;
-    color: #1a1a1a;
-    display: flex;
-    justify-content: center;
-    img{
-        width: 100%;
-        height: 100vh;
-        position: absolute;
-        top: 0;
-        left: 0;
-        object-fit: cover;
-        z-index: -999;
-    }
+    top: 0;
+    left: 0;
+    background: url('/img/ian-schneider-PAykYb-8Er8-unsplash.jpg');
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 15%;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    padding: 4rem;
+    padding-top: 9rem;
+    text-align: center;
+}
+
+h1 {
+    @include adaptiv-font(64, 24);
+    margin: 0 auto;
+    font-weight: 400;
+    color: #e7e7e7;
+    font-size: 4rem 2rem;
 }
 
 .wrapper {
-    display:grid;
-    place-items: center;
-    h1{
-        
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    align-items: center;
+    justify-items: center;
+    gap: 3rem;
+    margin-top: 6rem;
+    .data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+    }
+
+    p {
+        color: #ffffff;
+        font-weight: 700;
+        @include adaptiv-font(96, 36);
+    }
+
+    span {
+        color: #e7e7e7;
+
+        font-weight: 400;
+    }
+}
+
+@media only screen and (min-width: 1060px) {
+    .wrapper {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
