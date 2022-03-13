@@ -83,11 +83,7 @@ body {
   font-family: "Noto Sans", sans-serif;
   top: 0;
   left: 0;
-<<<<<<< HEAD
-  background: url("https://i.pinimg.com/originals/78/09/1b/78091b581e812693d86941d6012e6109.jpg");
-=======
   background: url("./img/ian-schneider-PAykYb-8Er8-unsplash.jpg");
->>>>>>> parent of e676ba4 (main)
   background-size: cover;
   background-position-x: 50%;
   background-position-y: 15%;
@@ -100,8 +96,7 @@ body {
 }
 
 h1 {
-  font-size: calc(
- 24px + 40 * ((100vw - 320px) / 960));
+  font-size: calc( 24px + 40 * ((100vw - 320px) / 960));
   margin: 0 auto;
   font-weight: 400;
   color: #e7e7e7;
@@ -141,8 +136,7 @@ h1 {
 .wrapper p {
   color: #ffffff;
   font-weight: 700;
-  font-size: calc(
- 36px + 60 * ((100vw - 320px) / 960));
+  font-size: calc( 36px + 60 * ((100vw - 320px) / 960));
 }
 
 .wrapper span {
@@ -152,10 +146,8 @@ h1 {
 
 @media only screen and (min-width: 1060px) {
   .wrapper {
-
-    
-      grid-template-columns: repeat(4, 1fr);
-
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
   }
 }
 /*# sourceMappingURL=main.css.map */
