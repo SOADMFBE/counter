@@ -92,12 +92,7 @@ $font: 'Noto Sans', sans-serif;
 
 body {
     font-family: $font;
-    top: 0;
-    left: 0;
-    background: url('/img/ian-schneider-PAykYb-8Er8-unsplash.jpg');
-    background-size: cover;
-    background-position-x: 50%;
-    background-position-y: 15%;
+    background-color: black;
     width: 100%;
     height: 100vh;
     z-index: -1;
